@@ -1,0 +1,9 @@
+.dist
+.qodo
+webfonts
+
+*.js
+*.css
+
+!script.js
+!style.css
