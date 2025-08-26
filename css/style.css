@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 :root {
   --primary-gold: #ffb940;
   --primary-black: #222831;
@@ -6,4 +11,60 @@
   --text-dark: #222831;
   --text-light: #bfc3c7;
 }
+body{
+    height: 1000px;
+}
 
+header{
+    position: sticky;
+    top: 3px;
+
+}
+nav{
+  background-color: var(--primary-gray);
+  display: flex;
+  justify-content: space-around;
+   
+  border-radius: 10px;
+  padding: 10px 50px;
+}
+
+.logo{ /*logo in header*/
+    cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/LogoCroppedNoBg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+nav ul{
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+nav ul li a{
+    color: var(--primary-black);
+    
+}
+nav ul li a:hover{
+    color: var(--primary-gold);
+    text-decoration: none;
+    transition: 0.3s;
+}
+nav button{
+    background-color: var(--primary-black);
+    color: var(--text-light);
+    border: none;
+    border-radius: 5px;
+    padding: 0px 10px;
+    cursor: pointer;
+}
+nav button:hover{
+    background-color: var(--primary-gold);
+    color: var(--text-dark);
+    transition: 0.3s;
+}
