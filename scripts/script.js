@@ -5,7 +5,7 @@ resumeButton.onclick = function() {
 
 
 const graduationTimer = document.getElementById("graduationTimer");
-const targetDate = new Date("2027-06-26T00:00:00");
+const targetDate = new Date("2027-06-26T12:00:00");
 function updateGraduationTimer() {
     let now = new Date();
     let diffMs = targetDate - now;
@@ -21,7 +21,20 @@ setInterval(updateGraduationTimer, 1000); //call every second
 
 let photo1 = document.getElementById("photoWd1");
 let photo2 = document.getElementById("photoWd2");
+let photo11 = document.getElementById("photoWd11");
+let photo22 = document.getElementById("photoWd22");
 // Ensure photo2 height matches photo1 height
-photo2.style.height = window.getComputedStyle(photo1).height;
-photo2.style.maxHeight = window.getComputedStyle(photo1).height;
+  photo2.style.height = window.getComputedStyle(photo1).height;
+    photo2.style.maxHeight = window.getComputedStyle(photo1).height;
+    photo22.style.height = window.getComputedStyle(photo11).height;
+    photo22.style.maxHeight = window.getComputedStyle(photo11).height;
+window.addEventListener('resize', function handleZoom() {
+    // Function body left empty
+    photo2.style.height = window.getComputedStyle(photo1).height;
+    photo2.style.maxHeight = window.getComputedStyle(photo1).height;
+    photo22.style.height = window.getComputedStyle(photo11).height;
+    photo22.style.maxHeight = window.getComputedStyle(photo11).height;
+});
+// photo2.style.width = window.getComputedStyle(photo1).width;
+// photo2.style.maxWidth = window.getComputedStyle(photo1).width;
 // photo2.style.width = window.getComputedStyle(photo1).width;
