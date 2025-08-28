@@ -1,7 +1,7 @@
 .dist
 .qodo
 webfonts
-
+*.map
 *.js
 *.css
 

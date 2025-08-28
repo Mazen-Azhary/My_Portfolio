@@ -23,4 +23,5 @@ let photo1 = document.getElementById("photoWd1");
 let photo2 = document.getElementById("photoWd2");
 // Ensure photo2 height matches photo1 height
 photo2.style.height = window.getComputedStyle(photo1).height;
-photo2.style.width = window.getComputedStyle(photo1).width;
+photo2.style.maxHeight = window.getComputedStyle(photo1).height;
+// photo2.style.width = window.getComputedStyle(photo1).width;

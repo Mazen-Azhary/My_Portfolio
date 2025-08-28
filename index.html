@@ -3,7 +3,7 @@
     <title>Mazen Al Azhary's Portfolio</title>
     <link rel="shortcut icon" href="images/LogoCropped.jpg" type="image/jpg">
     <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/bs.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -26,32 +26,41 @@
             <button id="resumeButton">Résumé</button>
         </nav>
     </header>
-    <main id="top">
-        <div  class="CoverText">
-            <h1>Hi 👋, I'm Mazen</h1>
-            <h3>Welcome to my portfolio website <br><strong> 100% made by me 🧑‍💻 </strong></h3>
-        </div>
-        <div class="arrowDiv">
-            <div class="arrowText">
-                <p>The next big thing <br> in web development</p>
+    <main id="top" class="container-fluid p-5">
+        <div class="main-row">
+            <div class="col-lg-5  col-md-6 col-sm-12 mb-4 d-flex flex-column justify-content-end align-items-center">
+                <div class="CoverText w-100 text-center mt-5">
+                    <h1>Hi 👋, I'm Mazen</h1>
+                    <h3>Welcome to my portfolio website<br><strong> 100% made by me 🧑‍💻 </strong></h3>
+                </div>
             </div>
-            <div class="arrow"><i class="fas fa-arrow-right"></i></div>
-        </div>
-        <div class="coverImageDiv">
-            <div class="imageContainer">
-                <div class="coverImg">
+            <div class="col-lg-4 col-md-4 col-sm-4 mb-4 d-flex flex-column justify-content-end align-items-center">
+                <div class="arrowDiv w-100 text-center mt-5">
+                    <div class="arrowText">
+                        <p>The next big thing <br> in web development</p>
+                    </div>
+                    <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-2 mb-4 col-sm-8 d-flex flex-column justify-content-end align-items-center">
+                <div class="coverImageDiv w-100 d-flex justify-content-center mt-5">
+                    <div class="imageContainer">
+                        <div class="coverImg">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
+            </div>
+        </main>
     
     <section id="about">
         <div class="container-fluid d-flex justify-content-between flex-wrap text-center">
             
             <div class="container mt-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex ">
-                        <div class="card w-100">
+                <div class="row justify-content-space-between flex-wrap">
+                    <div class="col-lg-4 col-md-4 col-sm-12 mb-4 d-flex flex-column justify-content-between">
+                        <div class="card w-100 h-100">
                             <img src="images/College.jpeg" id="photoWd2" class="card-img-top  collegeImg" alt="Me in college">
                             <div class="card-body">
                                 <h5 class="card-title">I am a Computer & Communication student at Alexandria University💻🛜</h5>
@@ -86,9 +95,7 @@
     
     
 
-    <script src="scripts/JQuery.js"></script>
-    <script src="scripts/Popper.js"></script>
-    <script src="scripts/LatestCompiled.js"></script>
+    <script src="scripts/bootstrap.bundle.min.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 </html>
