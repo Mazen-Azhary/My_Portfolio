@@ -180,6 +180,10 @@ main {
   color: var(--text-dark);
   margin-top: 20px;
 }
-.titleH2 h2{
-  
+#contact {
+  background-color: var(--background-light);
+  /* padding: 40px 0; */
+}
+.col-4 a{
+  text-decoration: none;
 }

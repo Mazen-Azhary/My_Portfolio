@@ -1,9 +1,2 @@
 .dist
 .qodo
-webfonts
-*.map
-*.js
-*.css
-
-!script.js
-!style.css
