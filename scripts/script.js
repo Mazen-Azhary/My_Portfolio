@@ -22,17 +22,33 @@ let photo1 = document.getElementById("photoWd1");
 let photo2 = document.getElementById("photoWd2");
 let photo11 = document.getElementById("photoWd11");
 let photo22 = document.getElementById("photoWd22");
-// Ensure photo2 height matches photo1 height
-photo2.style.height = window.getComputedStyle(photo1).height;
-photo2.style.maxHeight = window.getComputedStyle(photo1).height;
-photo22.style.height = window.getComputedStyle(photo11).height;
-photo22.style.maxHeight = window.getComputedStyle(photo11).height;
-window.addEventListener("resize", function handleZoom() {
-  photo2.style.height = window.getComputedStyle(photo1).height;
-  photo2.style.maxHeight = window.getComputedStyle(photo1).height;
-  photo22.style.height = window.getComputedStyle(photo11).height;
-  photo22.style.maxHeight = window.getComputedStyle(photo11).height;
-});
+
+function syncPhotoHeights() {
+  if (photo1 && photo2) {
+    photo2.style.height = window.getComputedStyle(photo1).height;
+    photo2.style.maxHeight = window.getComputedStyle(photo1).height;
+  }
+  if (photo11 && photo22) {
+    photo22.style.height = window.getComputedStyle(photo11).height;
+    photo22.style.maxHeight = window.getComputedStyle(photo11).height;
+  }
+}
+
+if (photo2) {
+  if (photo2.complete) {
+    syncPhotoHeights();
+  } else {
+    photo2.onload = syncPhotoHeights;
+  }
+}
+if (photo22) {
+  if (photo22.complete) {
+    syncPhotoHeights();
+  } else {
+    photo22.onload = syncPhotoHeights;
+  }
+}
+window.addEventListener("resize", syncPhotoHeights);
 
 const connectHubMedia = [
   "images/connectHub/0.mp4",
@@ -62,7 +78,7 @@ function showConnectHubMedia(index) {
     html = `<img src="${media}" class="img-fluid" style="max-height:400px;max-width:100%" alt="ConnectHub Media">`;
   } 
   else {
-    //video
+    
     html = `<video src="${media}" controls class="w-100" style="max-height:400px;"></video>`;
   }
   connectHubMediaDisplay.innerHTML = html;
