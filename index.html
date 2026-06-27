@@ -150,97 +150,150 @@
 
     </section>
 
-    <section >
-                <h2 class="titleH2" id="projects">Projects</h2>
-                <div class="container-fluid d-flex justify-content-between flex-wrap text-center">
-
+    <section>
+        <h2 class="titleH2" id="projects">Projects</h2>
+        <div class="container-fluid d-flex justify-content-between flex-wrap text-center">
             <div class="container mt-5">
+                <!-- Row 1: 4 projects -->
                 <div class="row justify-content-space-between flex-wrap">
-                  
-                    <div class="col-md-4 col-sm-12 mb-4 d-flex align-items-stretch">
+                    <!-- Project 1: Weather Monitoring System -->
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex align-items-stretch">
                         <div class="card w-100">
-                            <video controls >
+                            <div id="weatherSystemCarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="images/1ddia.png" class="d-block w-100" alt="System Architecture" onerror="this.src='images/LogoCropped.jpg'; this.alt='Image not found';">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/2ddia.png" class="d-block w-100" alt="Bitcask Storage Engine" onerror="this.src='images/LogoCropped.jpg'; this.alt='Image not found';">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/3ddia.png" class="d-block w-100" alt="Kubernetes Deployment" onerror="this.src='images/LogoCropped.jpg'; this.alt='Image not found';">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/4ddia.png" class="d-block w-100" alt="Monitoring Dashboard" onerror="this.src='images/LogoCropped.jpg'; this.alt='Image not found';">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/5ddia.png" class="d-block w-100" alt="Performance Metrics" onerror="this.src='images/LogoCropped.jpg'; this.alt='Image not found';">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#weatherSystemCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#weatherSystemCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Production-grade Weather Monitoring System ☁️📊</h5>
+                                <p class="card-text">
+                                    As part of the "Designing Data-Intensive Applications" course, I collaborated with a team to build a highly scalable weather monitoring system handling 10,000+ readings/sec with zero data loss. The system uses Kafka for stream processing with features like rain alerts (humidity > 70%), idempotent receivers to discard duplicates, dead letter channels for failed messages, and durable subscribers for guaranteed delivery. We implemented a Bitcask storage engine (3k writes/sec, 22k reads/sec) and deployed the entire system on Kubernetes with Elasticsearch and Kibana for monitoring. <a href="https://github.com/Mazen-Azhary/Weather-Station-Monitoring" target="_blank">GitHub Repo</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Real Madrid Website -->
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex align-items-stretch">
+                        <div class="card w-100">
+                            <video controls>
                                 <source src="images/rmaWebsite.mp4" type="video/mp4">
                             </video>
                             <div class="card-body">
                                 <h5 class="card-title">Real Madrid Themed Website 🤍</h5>
                                 <p class="card-text">
-                                    This is my latest website , frontend for an ecommerce app themed around Real Madrid , It has a lot of cool ui features demonstrating my abilites in using css3's feature such flexbox and grid. <a href="https://mazen-azhary.github.io/frontEndProject2/" target="_blank">Website Link</a>
-                                </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 mb-4 d-flex align-items-stretch">
-                        <div class="card w-100">
-                            <video controls >
-                                <source src="images/jobsite.mp4" type="video/mp4">
-                            </video>
-                            <!-- <img id="photoWd11" src="images/git2.png" class="card-img-top"> -->
-                            <div class="card-body">
-                                <h5 class="card-title">fully functional Job application website</h5>
-                                <p class="card-text"><strong>My best fullstack project</strong>, It was built using html , css for frontend, php for backend and sql as a database. It has lots of cool features such as recruiters managing job postings, applicants applying for jobs posted by recruiters , while both being able to track their application status from the point of view that matters to them.I also added a superadmin with full access to view and manage all users and jobs.</p>
+                                    This is my latest website, frontend for an ecommerce app themed around Real Madrid. It has a lot of cool UI features demonstrating my abilities in using CSS3's features such as flexbox and grid. <a href="https://mazen-azhary.github.io/frontEndProject2/" target="_blank">Website Link</a>
+                                </p>
                             </div>
                         </div>
                     </div>
-                      <div class="col-md-4 col-sm-12 mb-4 d-flex flex-column justify-content-between">
-                        <div class="card w-100 h-100">
+
+                    <!-- Project 3: Job Application Website -->
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex align-items-stretch">
+                        <div class="card w-100">
+                            <video controls>
+                                <source src="images/jobsite.mp4" type="video/mp4">
+                            </video>
+                            <div class="card-body">
+                                <h5 class="card-title">Fully Functional Job Application Website</h5>
+                                <p class="card-text"><strong>My best fullstack project</strong>, built using HTML, CSS for frontend, PHP for backend and SQL as a database. Features include recruiters managing job postings, applicants applying for jobs, and both tracking their application status. A superadmin has full access to view and manage all users and jobs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Ultimate Tic Tac Toe -->
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex align-items-stretch">
+                        <div class="card w-100">
                             <video controls>
                                 <source src="images/ticTacToe.mp4" type="video/mp4">
                             </video>
                             <div class="card-body">
                                 <h5 class="card-title">Ultimate Tic Tac Toe ✖️⭕</h5>
-                                <p class="card-text">Using PyQT5 , I Implemented the game from scratch , creating single buttons then small grids then larger grids fully frontend and backend.</div>
+                                <p class="card-text">Using PyQT5, I implemented the game from scratch, creating single buttons then small grids then larger grids, fully frontend and backend.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Row 2: 3 projects + empty column -->
                 <div class="row justify-content-space-between flex-wrap">
-                    <div class="col-md-4 col-sm-12 mb-4 d-flex d-flex align-items-stretch">
-                       <div class="card w-100" id="connectHubMediaContainer">
+                    <!-- Project 5: ConnectHub -->
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex align-items-stretch">
+                        <div class="card w-100" id="connectHubMediaContainer">
                             <div class="d-flex flex-column align-items-center">
                                 <div id="connectHubMediaDisplay" class="mb-3">
                                     
                                 </div>
-                                <div >
+                                <div>
                                     <button id="connectHubPrev" class="btn btn-primary mx-2">Previous</button>
                                     <button id="connectHubNext" class="btn btn-primary mx-2">Next photo/video</button>
                                 </div>
                                 <div class="card-body">
-
-                                    <h5 class="card-title">ConnectHub : A complete social media desktop app in java</h5>
-                                    <p class="card-text">This project involved me and 3 of my colleagues developing a social media app in java, with features such as login/signup , friend requests and accepting or declining from other users , blocking people , joining groups , posting or adding stories , seeing who's online and much more! <a href="https://www.linkedin.com/in/mazen-al-azhary-b5808424b/details/projects/" target="_blank">read more</a></p>
-                                   
+                                    <h5 class="card-title">ConnectHub: A Complete Social Media Desktop App in Java</h5>
+                                    <p class="card-text">This project involved me and 3 colleagues developing a social media app in Java, with features such as login/signup, friend requests, accepting or declining, blocking people, joining groups, posting or adding stories, seeing who's online and much more! <a href="https://www.linkedin.com/in/mazen-al-azhary-b5808424b/details/projects/" target="_blank">read more</a></p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-12 mb-4 d-flex align-items-stretch">
+
+                    <!-- Project 6: Mini Painter -->
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex align-items-stretch">
                         <div class="card w-100">
-                            <video controls >
+                            <video controls>
                                 <source src="images/miniPaint.mp4" type="video/mp4">
                             </video>
                             <div class="card-body">
-                                <h5 class="card-title">Mini Painter in java</h5>
-                                <p class="card-text">This project involves creating a simple painting application using Java Swing, allowing users to draw on a canvas with different colors and brush sizes. <br> You can also edit shapes after drawing by resizing or recoloring , you can also save your drawings in .dat files and load them later if needed.</p>
-                                </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 mb-4 d-flex">
-                        <div class="card w-100">
-                        
-                            <!-- <img id="photoWd11" src="images/git2.png" class="card-img-top"> -->
-                             <img src="images/rovGui.png" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Crocomarine ROV's system GUI</h5>
-                                <p class="card-text">Unfortunately I can't show the GUI for confidential reasons, But The design involved using PyQt5 for frontend , integrating ROS to control the ROV's movements and display vital sensors data of the rov in real time,such as speed and system condition(through imu sensor).</p>
+                                <h5 class="card-title">Mini Painter in Java</h5>
+                                <p class="card-text">A simple painting application using Java Swing, allowing users to draw on a canvas with different colors and brush sizes. You can also edit shapes after drawing by resizing or recoloring, and save drawings in .dat files to load later.</p>
                             </div>
                         </div>
                     </div>
-                   
+
+                    <!-- Project 7: ROV GUI -->
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex align-items-stretch">
+                        <div class="card w-100">
+                            <img src="images/rovGui.png" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Crocomarine ROV's System GUI</h5>
+                                <p class="card-text">Unfortunately I can't show the GUI for confidential reasons, but the design involved using PyQt5 for frontend, integrating ROS to control the ROV's movements and display vital sensor data in real time, such as speed and system condition through IMU sensor.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Empty Column for Future Project -->
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex align-items-stretch">
+                        <div class="card w-100 d-flex justify-content-center align-items-center" style="min-height: 400px; background-color: #f8f9fa; border: 2px dashed #dee2e6;">
+                            <div class="text-center p-4">
+                                <i class="fas fa-plus-circle" style="font-size: 3rem; color: #6c757d;"></i>
+                                <p class="mt-3 text-muted">New Projects Coming Soon</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-
         </div>
-
     </section>
 
 
